@@ -1,0 +1,17 @@
+describe('get festival list',{} => {
+    cy.request(
+   {
+    method:'GET'
+    url : '​https://eacp.energyaustralia.com.au/codingtest/api/v1/festivals'
+}
+    ).as('festivals')
+    
+    cy.get('@festivals').its('status').should('eq', 200)
+    cy.get('@festivals').then((responce) =>{
+        cy.log().JSON.stringify(responcr.body)
+    }
+
+    )
+    
+}
+)
