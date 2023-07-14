@@ -6,11 +6,6 @@ describe('my UI test suit', function(){
         cy.visit("http://localhost:4200/festivals")
         cy.wait(2000)
         cy.xpath('//ol/li').should('have.length.above', 0)
-        // let size = cy.getCount('//ol/li').then((name) => {
-        //     cy.log('Student Name: ' + name)
-        //   })
-        // cy.log(size)
-
     })   
     
 
