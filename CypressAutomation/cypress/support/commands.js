@@ -34,10 +34,8 @@ Cypress.Commands.add('getCount', (locator) =>{
       countOfElements = $elements.length;
       cy.log(countOfElements)
       return countOfElements
-     })
-     .then(countOfElements=>{
-        return countOfElements
-     })
+     });
+     
 
 })
      
