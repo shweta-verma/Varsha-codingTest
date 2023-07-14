@@ -1,7 +1,7 @@
-describe('get festival list',{} => {
+describe('get festival list',() => {
     cy.request(
    {
-    method:'GET'
+    method:'GET',
     url : '​https://eacp.energyaustralia.com.au/codingtest/api/v1/festivals'
 }
     ).as('festivals')

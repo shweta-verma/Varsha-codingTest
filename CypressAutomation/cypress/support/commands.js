@@ -23,3 +23,21 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('verifyListSizeNotZero', (locator, count) => { 
+    cy.xpath(locator).should('have.length.above', count)
+    
+})
+
+Cypress.Commands.add('getCount', (locator) =>{
+    let countOfElements = 0;
+    cy.xpath('//ol/li').then($elements => {
+      countOfElements = $elements.length;
+      cy.log(countOfElements)
+      return countOfElements
+     })
+     .then(countOfElements=>{
+        return countOfElements
+     })
+
+})
+     
